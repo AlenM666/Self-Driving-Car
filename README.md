@@ -11,10 +11,10 @@ rectangel.
 <br>
 
 ## Future Changes:
-  <li>better animation
-  <li>car model
-  <li>map
+  <li>better car movment
+  <li>add car model
   <li>make the car drive it self
+  <li>change background/work on desing
     
          
 <br>
