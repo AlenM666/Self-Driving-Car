@@ -15,7 +15,7 @@ The road is designed with 3 lines maybe add some more in the future, the cars wi
 For now, the car is a simple black Rectangle.
 
 
-<br>
+
 
 ## Future Changes:
   <li>add car model
