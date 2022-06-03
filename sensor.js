@@ -44,6 +44,8 @@ class Sensor{
     }
 
     #castRays(){
+        //casting rays 
+        //ray geometry
         this.rays=[];
         for(let i=0;i<this.rayCount;i++){
             const rayAngle=lerp(
@@ -64,6 +66,7 @@ class Sensor{
     }
 
     draw(ctx){
+        //rays
         for(let i=0;i<this.rayCount;i++){
             let end=this.rays[i][1];
             if(this.readings[i]){

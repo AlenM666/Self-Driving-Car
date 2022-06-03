@@ -21,6 +21,7 @@ class Car{
     }
 
     #move(){
+        //forward and backwards speed
         if(this.controls.forward){
             this.speed+=this.acceleration;
         }
@@ -41,10 +42,14 @@ class Car{
         if(this.speed<0){
             this.speed+=this.friction;
         }
+        //absolute speed
         if(Math.abs(this.speed)<this.friction){
             this.speed=0;
         }
 
+        //moves left and right
+        //flips controls for left and right 
+        //when moving in reverse
         if(this.speed!=0){
             const flip=this.speed>0?1:-1;
             if(this.controls.left){
@@ -54,12 +59,13 @@ class Car{
                 this.angle-=0.03*flip;
             }
         }
-
+        //move in direction of rotation
         this.x-=Math.sin(this.angle)*this.speed;
         this.y-=Math.cos(this.angle)*this.speed;
     }
 
     draw(ctx){
+        //rotation
         ctx.save();
         ctx.translate(this.x,this.y);
         ctx.rotate(-this.angle);

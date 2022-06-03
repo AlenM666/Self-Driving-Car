@@ -15,6 +15,8 @@ class Road{
         const topRight={x:this.right,y:this.top};
         const bottomLeft={x:this.left,y:this.bottom};
         const bottomRight={x:this.right,y:this.bottom};
+        //in array so we can have 
+        //more roads or more complex roads
         this.borders=[
             [topLeft,bottomLeft],
             [topRight,bottomRight]
@@ -28,6 +30,7 @@ class Road{
     }
 
     draw(ctx){
+        //drawing lanes
         ctx.lineWidth=5;
         ctx.strokeStyle="white";
 
@@ -38,6 +41,7 @@ class Road{
                 i/this.laneCount
             );
             
+            //line dashes on road 
             ctx.setLineDash([20,20]);
             ctx.beginPath();
             ctx.moveTo(x,this.top);
